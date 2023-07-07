@@ -1,0 +1,75 @@
+/*
+ Theme Name:     FanX Salt Lake Comic Convention Theme
+ Theme URI:      https://www.FanXsaltLake.com
+ Description:    A Divi Child Theme
+ Author:         Elizabeth Moore
+ Author URI:     https://www.DancingFraxinus.com
+ Template:       Divi
+ Version:        2.0
+*/
+
+/* Black Background */
+body{
+	background-color: black;
+}
+#main-content{
+	background-color: transparent !important;
+}
+.page-container{
+	overflow-y: default !important;
+}
+/* Break Words in Heading */
+h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+.rainborder img{
+	padding: 3% !important;
+}
+
+/* --- Rainbow Track Style Scrollbar --*/
+*::-webkit-scrollbar {
+  background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+/** Accessability Buttons **/
+.a11y-toolbar{
+	top: 75%;
+	left: 0;
+}
+.a11y-toolbar ul li button{
+	background: #000000;
+	border: 0px;
+}
+
+.a11y-toolbar button{
+	color: #ffffff !important;
+}
+
+.a11y-toolbar ul li button:hover{
+	background: #000000;
+	border: 0px;
+	transform: scale(1.25);
+}
+/** --END Accessability Buttons-- **/
+
+/** Admin Columns ---> **/
+
+img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
+	width: 100px !important;
+	height: auto !important;
+
+}
+
+/** Remove SEO Dropdowns **/
+#wpseo-filter, #filter-by-date, #wpseo-readability-filter{
+	display: none !important;
+}
+/** END Remove SEO Dropdowns **/
+
+/** END Admin Columns <--- **/
