@@ -14,7 +14,7 @@ echo '<p><i>All updates to the FanX Premium Child Theme code are logged here whe
 
 	// My feeds list
 	$my_feeds = array(
-				'https://github.com/dancingfraxinus/fanx-divi-child-theme/commits.atom'
+				'https://github.com/dancingfraxinus/fanx-premium-child-theme/commits.atom'
 				);
 
 	// Loop through Feeds
