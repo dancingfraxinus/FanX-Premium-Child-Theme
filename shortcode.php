@@ -13,13 +13,6 @@ function page_content_df( ){
 }
 add_shortcode( 'page_content', 'page_content_df' );
 
-// -- [tax_venue] -->
-
-function tax_venue_df($atts){
-   return get_the_terms( $post, 'venue' );
-}
-add_shortcode( 'tax_venue', 'tax_venue_df' );
-
 // --[sitemap] -->
 function sitemap_df($atts){
    return get_template_part('sitemap');
@@ -39,6 +32,18 @@ function thembreak_df() {
 	return '<hr style="width:50%; text-align:left; ; margin: 3%; border-top: 1px solid gold;">';
 }
 add_shortcode( 'hr', 'thembreak_df' );
+
+// -- [postdate] -->
+function postdate_df() {
+	return get_the_date;
+}
+add_shortcode( 'postdate', 'postdate_df' );
+
+// -- [postcat] -->
+function postcat_df() {
+	return get_the_terms( $post_id, 'category' );
+}
+add_shortcode( 'postcat', 'postcat_df' );
 
 
 //-- Shortcode for ACF Output --->>>
