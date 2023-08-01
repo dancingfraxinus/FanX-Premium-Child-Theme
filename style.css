@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
 
+/* Padding for border on images */
 .rainborder img{
 	padding: 3% !important;
 }
@@ -73,3 +74,18 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
 /** END Remove SEO Dropdowns **/
 
 /** END Admin Columns <--- **/
+
+
+/* --  Menu items -- */
+
+/* Can be used to hide ANYTHING, mainly used to hide Menu items when needed*/ 
+.hide{
+	display: none; 
+}
+
+
+/* --  END Menu items -- */
+
+/**
+Don't forget to Add items to the READ ME file for furture refrence! 
+**/
