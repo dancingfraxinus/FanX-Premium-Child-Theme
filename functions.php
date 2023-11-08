@@ -7,7 +7,8 @@ include('white-label.php'); //Backend Personalization
 include('alerts/alerts.php'); //DBW - Update website alert bar
 include('dp/filtergrid.php'); //Divi Filtergrid Customizations
 include('acf/optionspages.php'); //Acf Plugin Customizations
-//Stylesheet Access --->
+
+// --- Stylesheet Access --->
 function my_enqueue_assets() {
   $parent_style = 'parent-style';
 
@@ -20,7 +21,7 @@ function my_enqueue_assets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'my_enqueue_assets');
-//Stylesheet Access <---
+// --- Stylesheet Access <---
 
 //Images --->
 

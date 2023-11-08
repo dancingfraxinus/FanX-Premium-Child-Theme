@@ -38,26 +38,6 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid white;
 }
 
-/** Accessability Buttons **/
-.a11y-toolbar{
-	top: 75%;
-	left: 0;
-}
-.a11y-toolbar ul li button{
-	background: #000000;
-	border: 0px;
-}
-
-.a11y-toolbar button{
-	color: #ffffff !important;
-}
-
-.a11y-toolbar ul li button:hover{
-	background: #000000;
-	border: 0px;
-	transform: scale(1.25);
-}
-/** --END Accessability Buttons-- **/
 
 /** Admin Columns ---> **/
 
