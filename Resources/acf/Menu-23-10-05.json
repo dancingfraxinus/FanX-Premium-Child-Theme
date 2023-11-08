@@ -1,0 +1,58 @@
+[
+    {
+        "key": "group_651de9316640e",
+        "title": "Menu",
+        "fields": [
+            {
+                "show_column_filter": false,
+                "allow_bulkedit": false,
+                "allow_quickedit": false,
+                "show_column": false,
+                "show_column_weight": 1000,
+                "show_column_sortable": false,
+                "key": "field_651de931f1d5c",
+                "label": "Menu Notes:",
+                "name": "",
+                "aria-label": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": ".hide: to hide pre\/post con pages & guestlists as needed.",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "nav_menu",
+                    "operator": "==",
+                    "value": "all"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "left",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "acfe_display_title": "Menu Notes",
+        "acfe_autosync": [
+            "php",
+            "json"
+        ],
+        "acfe_meta": "",
+        "acfe_note": "",
+        "acfe_form": 0
+    }
+]
