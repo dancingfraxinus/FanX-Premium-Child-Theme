@@ -65,84 +65,91 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
 
 /* --  END Menu items -- */
 
-/** ---- Mobile MENU & Drop - Down ---> */
-/* MOBILE Logo & Icons Fix */ 
-@media only screen and (max-width:1380px) and (min-width:100px){ 
-	#mainheader.et_pb_fullwidth_section>.et_pb_module:not(.et_pb_post_content):not(.et_pb_fullwidth_post_content) .et_pb_row{
-margin: 0px !important;
-		
-width: 100vw;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-align-content: center;
-}
-.et_pb_menu__logo-wrap{
-margin: 0px !important;
-	padding: 0px !important;
-}  
-
-.et_pb_menu__wrap{ 
-justify-content: right !important; 
-  padding: 0 6% 0 0;
-  margin: 0; 
-}
-} /*end media max 1380 */
-
+/*MAIN MENU */
+ /* Mobile Logo & Icons Fix */ 
+ @media only screen and (max-width: 980px){ #fanxheader.et_pb_fullwidth_section>.et_pb_module:not(.et_pb_post_content):not(.et_pb_fullwidth_post_content) .et_pb_row{
+    margin: 0px;
+    padding: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  .et_pb_menu__logo-wrap{
+    margin-bottom: 0px !important; 
+    margin-top: 0px; 
+    margin-left: 20px; 
+  }  
+.et_pb_menu__wrap{ /*ICONS*/
+    justify-content: flex-end !important; 
+  	padding: 2%;
+  }
+  } /*end media max 980 */
 /* Mobile Dropdown Fix  */
-@media only screen and (max-width: 1380px){
+  @media only screen and (max-width: 980px){
 
-/* ---Mobile Drop Down---> */
+    /* ---Mobile Drop Down---> */
 #main-menu .et_mobile_menu {
-	max-height: 90vh !important;  
-	  min-width: 300px !important;
-		margin: 0; 
-	z-index: 9999;
-  overflow: scroll !important; 
+    	max-height: 90vh !important;  
+	  	min-width: 300px !important;
+			margin: 0; 
+    	z-index: 9999;
+      overflow: scroll !important; 
 }
-
+    
 /* --- Style Scrollbar --*/
 *::-webkit-scrollbar {
-background: white; 
+  background: white; 
 }
 *::-webkit-scrollbar-thumb {
-background-color: #FEAD34;
-border-radius: 20px;
-
+  background-color: #FEAD34;
+  border-radius: 20px;
+  
 }
-}/*end media max 1380 */
-
+  }/*end media max 980 */
 /* Styling the Search Bar*/
 /** Menu Search Bar **/ 
 #main-menu.et_pb_fullwidth_menu .et_pb_menu__search-input{
-color:  #c6a200; 
-padding: 20px; 	
-text-align: center; 
-font-size: 30px !important;
-background-color: #330066 !important;
-z-index: 9999;
-}
+	color:  #c6a200; 
+	padding: 20px; 	
+	text-align: center; 
+	font-size: 30px !important;
+	background-color: #330066 !important;
+  z-index: 9999;
+	}
 ::placeholder{
-color: #c6a200;
-z-index: 9999;
+	color: #c6a200;
+    z-index: 9999;
 }
-.et_pb_menu__icon.et_pb_menu__close-search-button{
-	font-size: 20px;
-  margin: 0 0 0 -70px;
-	padding: 20px; 
-}
+  .et_pb_menu__icon.et_pb_menu__close-search-button{
+		font-size: 20px;
+	  margin: 0 0 0 -70px;
+		padding: 20px; 
+	}
 .et_pb_menu .et_pb_menu__search-container{
-position: relative; 
-top: 0px; 
-z-index: 9999;
+	position: relative; 
+	top: 0px; 
+  z-index: 9999;
 }/** END Search Bar **/  
+
 /*The Rest of it*/
-.et_pb_fullwidth_menu .et-menu>li {
-padding: 0 7px !important; 
-margin: 0px !important; 
-}
-/** <---- END Mobile MENU & Drop - Down --- */
+ .et_pb_fullwidth_menu .et-menu>li {
+    padding: 0 7px !important; 
+    margin: 0px !important; 
+  }/** END MENU **/
+
+/** --- #no-mobile Menu Code --- **/
+/** Disables Mobile Menu & Keeps Desktop Menu on mobile **/
+    #no-mobile .mobile_menu_bar{
+        display:none !important;
+    }
+    #no-mobile .et_pb_menu__menu{
+		display: block !important;
+		margin: 0 auto !important;
+	}	 
+/** END #no-mobile Menu **/
 
 
 

@@ -6,7 +6,6 @@ include('shortcode.php'); //Custom Shortcode
 include('white-label.php'); //Backend Personalization
 include('alerts/alerts.php'); //DBW - Update website alert bar
 include('dp/filtergrid.php'); //Divi Filtergrid Customizations
-include('acf/optionspages.php'); //Acf Plugin Customizations
 
 // --- Stylesheet Access --->
 function my_enqueue_assets() {
@@ -23,29 +22,14 @@ function my_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'my_enqueue_assets');
 // --- Stylesheet Access <---
 
-//Images --->
+// Media --->
 
-add_theme_support( 'post-thumbnails' );
+//Post Thumbs 
+//add_theme_support( 'post-thumbnails' );
 //add_image_size( 'sm-square', 300, 300, false ); <-- To add an image size
 
-//**Post Admin Thumbnails
 
-add_filter('manage_posts_columns', 'add_img_column');
-add_filter('manage_posts_custom_column', 'manage_img_column', 10, 10);
-
-function add_img_column($columns) {
-  $columns = array_slice($columns, 0, 1, true) + array("img" => "Featured Image") + array_slice($columns, 1, count($columns) - 1, true);
-  return $columns;
-}
-
-function manage_img_column($column_name, $post_id) {
- if( $column_name == 'img' ) {
-  echo get_the_post_thumbnail($post_id, 'thumbnail');
- }
- return $column_name;
-}
-
-//END Images <---
+//END Media <---
 
 //**Taxonomies --->
 

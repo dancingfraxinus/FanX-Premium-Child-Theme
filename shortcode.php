@@ -1,4 +1,8 @@
 <?php
+
+//Shortcodes in ACF 
+add_filter('acf/format_value/type=textarea', 'do_shortcode');
+
 // -- [page_title] -->
 
 function page_title_df( ){
@@ -32,18 +36,6 @@ function thembreak_df() {
 	return '<hr style="width:50%; text-align:left; ; margin: 3%; border-top: 1px solid gold;">';
 }
 add_shortcode( 'hr', 'thembreak_df' );
-
-// -- [postdate] -->
-function postdate_df() {
-	return get_the_date;
-}
-add_shortcode( 'postdate', 'postdate_df' );
-
-// -- [postcat] -->
-function postcat_df() {
-	return get_the_terms( $post_id, 'category' );
-}
-add_shortcode( 'postcat', 'postcat_df' );
 
 
 //-- Shortcode for ACF Output --->>>
