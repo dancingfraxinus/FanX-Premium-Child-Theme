@@ -2,6 +2,8 @@
 
 //Shortcodes in ACF 
 add_filter('acf/format_value/type=textarea', 'do_shortcode');
+add_filter('acf/format_value/type=text', 'do_shortcode');
+add_filter( 'wp_nav_menu', 'do_shortcode');
 
 // -- [page_title] -->
 
