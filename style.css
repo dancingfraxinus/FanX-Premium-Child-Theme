@@ -55,16 +55,6 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
 
 /** END Admin Columns <--- **/
 
-
-/* --  Menu items -- */
-
-/* Can be used to hide ANYTHING, mainly used to hide Menu items when needed*/ 
-.hide{
-	display: none !important; 
-}
-
-/* --  END Menu items -- */
-
 /*MAIN MENU */
  /* Mobile Logo & Icons Fix */ 
  @media only screen and (max-width: 980px){ #fanxheader.et_pb_fullwidth_section>.et_pb_module:not(.et_pb_post_content):not(.et_pb_fullwidth_post_content) .et_pb_row{
@@ -90,6 +80,7 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
 /* Mobile Dropdown Fix  */
   @media only screen and (max-width: 980px){
 
+
     /* ---Mobile Drop Down---> */
 #main-menu .et_mobile_menu {
     	max-height: 90vh !important;  
@@ -109,6 +100,7 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
   
 }
   }/*end media max 980 */
+
 /* Styling the Search Bar*/
 /** Menu Search Bar **/ 
 #main-menu.et_pb_fullwidth_menu .et_pb_menu__search-input{
@@ -150,6 +142,29 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
 		margin: 0 auto !important;
 	}	 
 /** END #no-mobile Menu **/
+
+/** POP UP WINDOW **/
+/** Fixes Divi Filtergrid Pop Up Window Size Restriction **/
+.mfp-content{
+  width: 90vw !important; 
+  max-width: 1300px !important; 
+  height: 80vh !important; 
+  margin-top: -10% !important; 
+}
+/** END POP UP WINDOW **/
+
+
+
+
+
+/* --  CSS ACTIONS -- */
+
+/* Can be used to hide ANYTHING. Main use: hide Menu items when needed*/ 
+.hide{
+	display: none !important; 
+}
+
+/* --  END CSS ACTIONS -- */
 
 
 

@@ -6,6 +6,7 @@ include('shortcode.php'); //Custom Shortcode
 include('white-label.php'); //Backend Personalization
 include('alerts/alerts.php'); //DBW - Update website alert bar
 include('dp/filtergrid.php'); //Divi Filtergrid Customizations
+include('acf/tweaks.php'); //ACF Fields Customizations 
 
 // --- Stylesheet Access --->
 function my_enqueue_assets() {
@@ -20,6 +21,7 @@ function my_enqueue_assets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'my_enqueue_assets');
+
 // --- Stylesheet Access <---
 
 // Media --->
@@ -50,24 +52,11 @@ add_action('pre_get_posts', 'tags_support_query');
 
 //END Taxonomies <---
 
-// Archives --->
-  // Guest Archive Category Exclusions ---> //TROUBLESHOOTING
-  function df_exclude_posts( $query ) {
-      if ( $query->is_archive('guests') ) {
-          $query->set( 'guest-type', array( -180, -205, -179 ) ); //Exclude in Memorium, Postponed, Alumni
-    }
-  }
-  add_action( 'pre_get_posts', 'df_exclude_posts' );
-
-  //END Guest Archives Category Exclusions <---
-
-//END Archives <---
-
 //Search Function
 
 function tg_include_custom_post_types_in_search_results( $query ) {
     if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
-        $query->set( 'post_type', array( 'guest', 'feature', 'special_guest', 'exhibitor', 'event', 'ticket' ) );
+        $query->set( 'post_type', array( 'guest', 'feature', 'panelist', 'exhibitor', 'event', 'ticket' ) );
     }
 }
 add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_search_results' );

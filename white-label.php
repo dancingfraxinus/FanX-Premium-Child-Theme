@@ -2,7 +2,7 @@
 
 //Admin Bar (Top) ------>
 
-// Admin Bar Links
+// --- Admin Bar Links ---->
 function df_admin_bar_render() {
 global $wp_admin_bar;
 
@@ -21,10 +21,19 @@ $wp_admin_bar->add_menu(array(
 'title' => __('Cloudflare Settings (Dev Mode)'),
 'href' => $cfsettingsTAB
 ));
+
+$eventinfoTAB = '/wp-admin/admin.php?page=fanx-theme'; //ADD CLOUDFLARE
+$wp_admin_bar->add_menu( array(
+'parent' => false,
+'id' => 'eventinfo',
+'title' => __('ⓘ Event Info'),
+'href' => $eventinfoTAB
+));
+
 }
 
 add_action( 'wp_before_admin_bar_render', 'df_admin_bar_render' );
-//END Admin Bar Links
+// <---- END Admin Bar Links ---
 
 //Different Admin Themes for Multisite
 add_filter('get_user_option_admin_color', 'change_admin_color');
@@ -44,6 +53,10 @@ function change_admin_color($result) {
     //ATL
       elseif(get_current_blog_id() === 3) {
         return 'blue';
+      }
+      //Wisconsin
+      elseif(get_current_blog_id() === 9) {
+        return 'coffee';
       }
   else {
     return $result;
