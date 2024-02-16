@@ -26,11 +26,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Padding for border on images */
 .rainborder img{
 	padding: 3% !important;
-}
+} /*REMOVE - Added to Image Presets - Rainboarder Free-Form CSS on ATL */
 
 /* --- Rainbow Track Style Scrollbar --*/
 *::-webkit-scrollbar {
-  background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: linear-gradient(0deg, #ae1be8, #e71ded, #0d9daa;
 }
 *::-webkit-scrollbar-thumb {
   background-color: #000000;
@@ -77,6 +77,7 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
   	padding: 2%;
   }
   } /*end media max 980 */
+  
 /* Mobile Dropdown Fix  */
   @media only screen and (max-width: 980px){
 
@@ -95,7 +96,7 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
   background: white; 
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #FEAD34;
+  background-color: white;
   border-radius: 20px;
   
 }
@@ -104,7 +105,7 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
 /* Styling the Search Bar*/
 /** Menu Search Bar **/ 
 #main-menu.et_pb_fullwidth_menu .et_pb_menu__search-input{
-	color:  #c6a200; 
+	color:  white; 
 	padding: 20px; 	
 	text-align: center; 
 	font-size: 30px !important;
@@ -112,7 +113,7 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
   z-index: 9999;
 	}
 ::placeholder{
-	color: #c6a200;
+	color: white;
     z-index: 9999;
 }
   .et_pb_menu__icon.et_pb_menu__close-search-button{
@@ -152,8 +153,6 @@ img.attachment-thumbnail.size-thumbnail.wp-post-image{  /* <--- featured image*/
   margin-top: -10% !important; 
 }
 /** END POP UP WINDOW **/
-
-
 
 
 
