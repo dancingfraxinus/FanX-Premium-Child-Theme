@@ -1,15 +1,6 @@
 <?php
 
-//Custom Content-->TROUBLESHOOTING<--
-
-    //Price Grid Button --->
-    function dpdfg_after_read_more($content, $props) {
-if (isset($props['price_grid']) && $props['price_grid'] === 'custom-content') {
-    echo do_shortcode('[divi_shortcode id="39649"]');
-} }
-    add_filter('dpdfg_after_read_more', 'dpdfg_after_read_more', 10, 2);
-
-    //END Price Grid Button <---
+//Custom Content-->
 //END Custom Content <--- 
 
 //Use When Needed:

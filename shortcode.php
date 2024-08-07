@@ -1,9 +1,20 @@
 <?php
 
 //Shortcodes in ACF 
-add_filter('acf/format_value/type=textarea', 'do_shortcode');
-add_filter('acf/format_value/type=text', 'do_shortcode');
-add_filter( 'wp_nav_menu', 'do_shortcode');
+add_filter('acf/format_value/type=textarea', 'do_shortcode'); //Text Area
+add_filter('acf/format_value/type=text', 'do_shortcode'); //Text Field
+add_filter('acf/format_value/type=message', 'do_shortcode'); //Message
+
+//WP Core
+add_filter( 'wp_title', 'do_shortcode'); //Title
+add_filter( 'the_title', 'do_shortcode'); //Title
+add_filter( 'single_post_title', 'do_shortcode'); //Post Title
+add_filter( 'widget_text', 'do_shortcode'); //Widget Text
+add_filter( 'the_excerpt', 'do_shortcode'); //Excerpt 
+
+//WP Menu 
+add_filter( 'wp_nav_menu', 'do_shortcode'); // Nav Label
+
 
 // -- [page_title] -->
 
@@ -39,7 +50,20 @@ function thembreak_df() {
 }
 add_shortcode( 'hr', 'thembreak_df' );
 
+//--- [year] Used in Socket -->
+function year_shortcode () {
+   $year = date_i18n ('Y');
+   return $year;
+   }
+   add_shortcode ('year', 'year_shortcode');
+
+// -- [site_url] --> 
+function generate_site_url_shortcode() {
+   return get_site_url();
+}
+add_shortcode( 'site_url', 'generate_site_url_shortcode' );
+
 
 //-- Shortcode for ACF Output --->>>
 
-//** Remember to add shortcode to list on Readme.txt file **//
+//** Remember to add shortcode to ACF Notes**//

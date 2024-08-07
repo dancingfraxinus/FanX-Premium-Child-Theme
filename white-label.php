@@ -2,7 +2,7 @@
 
 //Admin Bar (Top) ------>
 
-// Admin Bar Links
+// --- Admin Bar Links ---->
 function df_admin_bar_render() {
 global $wp_admin_bar;
 
@@ -21,10 +21,19 @@ $wp_admin_bar->add_menu(array(
 'title' => __('Cloudflare Settings (Dev Mode)'),
 'href' => $cfsettingsTAB
 ));
+
+$eventinfoTAB = '/wp-admin/admin.php?page=fanx-theme'; //ADD CLOUDFLARE
+$wp_admin_bar->add_menu( array(
+'parent' => false,
+'id' => 'eventinfo',
+'title' => __('ⓘ Event Info'),
+'href' => $eventinfoTAB
+));
+
 }
 
 add_action( 'wp_before_admin_bar_render', 'df_admin_bar_render' );
-//END Admin Bar Links
+// <---- END Admin Bar Links ---
 
 //Different Admin Themes for Multisite
 add_filter('get_user_option_admin_color', 'change_admin_color');
@@ -45,6 +54,10 @@ function change_admin_color($result) {
       elseif(get_current_blog_id() === 3) {
         return 'blue';
       }
+      //Wisconsin
+      elseif(get_current_blog_id() === 9) {
+        return 'coffee';
+      }
   else {
     return $result;
   }
@@ -52,9 +65,11 @@ function change_admin_color($result) {
 
 //ADMIN COlUMS ---->>>
 
-//Add Post ID
-add_filter( 'manage_posts_columns', 'revealid_add_id_column', 5 );
-add_action( 'manage_posts_custom_column', 'revealid_id_column_content', 5, 2 );
+//Add Post ID to Admin Columns --->>>
+
+//CPTs 
+add_filter( 'manage_posts_columns', 'revealid_add_id_column', 100 );
+add_action( 'manage_posts_custom_column', 'revealid_id_column_content', 100, 2 );
 
 
 function revealid_add_id_column( $columns ) {
@@ -62,9 +77,9 @@ function revealid_add_id_column( $columns ) {
    return $columns;
 }
 
-function revealid_id_column_content( $column, $id ) {
+function revealid_id_column_content( $column, $post_id ) {
   if( 'revealid_id' == $column ) {
-    echo $id;
+    echo $post_id;
   }
 }
 
@@ -80,6 +95,38 @@ foreach ( $custom_post_types as $post_type ) {
 	add_action( 'manage_edit-'. $post_type . '_columns', 'revealid_add_id_column' );
 	add_filter( 'manage_'. $post_type . '_custom_column', 'revealid_id_column_content' );
 }
+
+//Taxonomies 
+add_filter( 'manage_edit-link-categories_columns', 'revealid_add_taxonomy_id_column', 100 );
+add_action( 'manage_link_categories_custom_column', 'revealid_taxonomy_id_column_content', 100, 2 );
+
+function revealid_add_taxonomy_id_column($columns ) {
+  $columns['revealid_id'] = 'ID';
+  return $columns;
+}
+
+function revealid_taxonomy_id_column_content($column, $tag_id) {
+  if ('revealid_id' == $column) {
+      $content = $tag_id;
+  }
+  return $content;
+}
+
+$custom_taxonomies = get_taxonomies(
+  array(
+      'public' => true,
+      '_builtin' => false
+  ),
+  'names'
+);
+
+foreach ($custom_taxonomies as $taxonomy) {
+  add_filter('manage_edit-' . $taxonomy . '_columns', 'revealid_add_taxonomy_id_column', 5);
+  add_filter('manage_' . $taxonomy . '_custom_column', 'revealid_taxonomy_id_column_content', 10, 3);
+}
+
+
+//END Add Post ID to Admin Columns s <<<<-------
 
 // --- Remove Yoast Filter Dropdown --->
 add_action( 'admin_init', 'df_yoast_removal', 20 );
@@ -116,9 +163,24 @@ function df_yoast_removal() {
 
 //Footer Text
 function et_change_admin_footer_text () {
- return __('Powered by Dan Farr Productions. Premium Child Theme designed & coded with ♥ by <a href="https://www.dancingfraxinus.com/">Liz Moore</a>.');
+ return __("Powered by Dan Farr Productions. 
+ Premium Child Theme designed & coded with ♥ by <a href='https://www.dancingfraxinus.com/'>Liz Moore</a>.");
 }
 add_filter( 'admin_footer_text', 'et_change_admin_footer_text' );
+
+
+//User Permissions--->
+
+// Grant the unfiltered_html capability to the user
+$user_id = 2;
+$user = new WP_User($user_id);
+$user->add_cap('unfiltered_html');
+
+
+
+
+//END User Permissions <--- 
+
 
 
 //Use When Needed:

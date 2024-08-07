@@ -1,0 +1,229 @@
+{
+    "key": "group_fandoms",
+    "title": "Fandoms",
+    "fields": [
+        {
+            "allow_backendsearch": false,
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_65c1a50de2fcf",
+            "label": "Basic Info & Header",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
+            "allow_backendsearch": false,
+            "show_column_filter": false,
+            "allow_bulkedit": 1,
+            "allow_quickedit": 1,
+            "show_column": 0,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_65f4bf3717818",
+            "label": "SubMenu",
+            "name": "submenu",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "et_pb_layout"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": [
+                "layout_category:menus"
+            ],
+            "return_format": "id",
+            "multiple": 0,
+            "save_custom": 0,
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "allow_null": 0,
+            "acfe_permissions": "",
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": [],
+            "save_post_type": "",
+            "save_post_status": ""
+        },
+        {
+            "allow_backendsearch": 0,
+            "show_column_filter": false,
+            "allow_bulkedit": 0,
+            "allow_quickedit": 0,
+            "show_column": 0,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_661870a9e6569",
+            "label": "Subtitle",
+            "name": "subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "appears below Category TItle",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "maxlength": "",
+            "acfe_permissions": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "allow_backendsearch": false,
+            "show_column_filter": false,
+            "allow_bulkedit": false,
+            "allow_quickedit": false,
+            "show_column": false,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_66038bd394181",
+            "label": "Footer",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "acfe_permissions": "",
+            "selected": 0
+        },
+        {
+            "allow_backendsearch": 0,
+            "show_column_filter": false,
+            "allow_bulkedit": 0,
+            "allow_quickedit": 0,
+            "show_column": 0,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_66038be594182",
+            "label": "Smallprint",
+            "name": "smallprint",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "*Guest appearances are subject to change or cancellation.",
+            "acfe_textarea_code": 0,
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "maxlength": "",
+            "acfe_permissions": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "allow_backendsearch": 0,
+            "show_column_filter": false,
+            "allow_bulkedit": 0,
+            "allow_quickedit": 0,
+            "show_column": 0,
+            "show_column_weight": 1000,
+            "show_column_sortable": false,
+            "key": "field_66038c3394183",
+            "label": "Smallprint - Celeb Ops & Autos",
+            "name": "smallprint_celeb",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "**For more information about Autographs, Memorabilia Signings, Voice recordings, and other signing table opportunities visit the Celebrities Booth during the convention. Prices and options are subject to change.",
+            "acfe_textarea_code": 0,
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "maxlength": "",
+            "acfe_permissions": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "fandom"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Xperience & Info Pages, Main Page",
+    "show_in_rest": 1,
+    "acfe_display_title": "Fandoms",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_permissions": [
+        "super_admin",
+        "administrator",
+        "editor"
+    ],
+    "acfe_meta": "",
+    "acfe_note": "",
+    "acfe_form": 1,
+    "qef_simple_location_rules": 0,
+    "modified": 1722988329
+}
